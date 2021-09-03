@@ -2,8 +2,7 @@ import React from "react";
 import { 
   View, 
   Text,
-  Image,
-  StatusBar 
+  Image
 } from 'react-native'
 import { ButtonIcon } from "../../components/ButtonIcon";
 import IllustrationImg from '../../assets/illustration.png';
@@ -14,11 +13,6 @@ export function SingIn(){
 
   return(
     <View style={styles.container}>
-      <StatusBar 
-        barStyle='light-content'
-        backgroundColor='transparent'
-        translucent
-      />
       <Image 
         source={IllustrationImg}
         style={styles.image}
@@ -27,8 +21,9 @@ export function SingIn(){
 
       <View style={styles.content}> 
         <Text style={styles.title}>
-          Conecte-se {`\n`} e organize 
-          suas jogatinas {`\n`}
+          Conecte-se {'\n'}
+          e organize
+          suas jogatinas
         </Text>
 
         <Text style={styles.subtitle}>
