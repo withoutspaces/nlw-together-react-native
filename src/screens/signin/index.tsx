@@ -7,9 +7,15 @@ import {
 import { ButtonIcon } from "../../components/ButtonIcon";
 import IllustrationImg from '../../assets/illustration.png';
 import { styles } from './style'
+import { useNavigation } from "@react-navigation/core";
 
 
 export function SingIn(){
+  const navigation = useNavigation();
+
+  function handleSignIn() {
+    navigation.navigate('Home');
+  }
 
   return(
     <View style={styles.container}>
@@ -32,7 +38,7 @@ export function SingIn(){
         </Text>
         <ButtonIcon 
           title={'Entrar com o Discord'} 
-          activeOpacity={0.7} 
+          onPress={handleSignIn}
         />
         
       </View>
